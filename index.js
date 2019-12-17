@@ -65,6 +65,7 @@ async function getDeploymentUrl() {
   }
   console.log(deploymentUrl);
   core.setOutput('preview-url', `https://${deploymentUrl}`);
+  console.log(`::set-output name=preview-url::https://${deploymentUrl}`);
 }
 
 run().catch(error => {
