@@ -63,6 +63,7 @@ async function getDeploymentUrl() {
       }
     }
   }
+  console.log(deploymentUrl);
   core.setOutput('preview-url', `https://${deploymentUrl}`);
 }
 
