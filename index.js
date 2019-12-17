@@ -65,6 +65,7 @@ async function getDeploymentUrl() {
   }
   console.log(deploymentUrl);
   core.setOutput('preview-url', `https://${deploymentUrl}`);
+  core.exportVariable('CYPRESS_BASE_URL', `https://${deploymentUrl}`);
   console.log(`::set-output name=preview-url::https://${deploymentUrl}`);
 }
 
