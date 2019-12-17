@@ -1,0 +1,21 @@
+name: 'ZEIT Now Deployment url'
+description: 'get a deployment url'
+inputs:
+  zeit-token:
+    description: 'zeit.co token'
+    required: true
+  zeit-team-id:
+    description: ' This is required if your deployment is made on team project.'
+    required: false
+
+outputs:
+  preview-url:
+    description: 'deployment preview URL'
+
+runs:
+  using: 'node12'
+  main: 'index.js'
+
+branding:
+  icon: 'check'
+  color: 'black'
